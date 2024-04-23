@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "yH++Bryb6icLRqUekn216T35Ez0x/4SUZCpddwSAdRC0zwEoo8tI5PIInk8Na13Q9vfsKu9mxk0jmP20ZSLwEw==",
+  "success": true,
+  "projectFilePath": "/Users/edwardflores/Projects/Development/MultiAiConnector/MultiAiConnector/MultiAiConnector.csproj",
+  "expectedPackageFiles": [
+    "/Users/edwardflores/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
