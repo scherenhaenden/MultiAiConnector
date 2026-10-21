@@ -1,7 +1,6 @@
-using MultiAiConnector.Engines.Core;
 using Newtonsoft.Json;
 
-namespace MultiAiConnector.Engines.Perplexity;
+namespace MultiAiConnector.Engines.AI.Perplexity.Models;
 
 public class RequestModel
 {

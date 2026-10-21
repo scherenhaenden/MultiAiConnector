@@ -1,6 +1,6 @@
 using MultiAiConnector.SystemExtender.Attributes;
 
-namespace MultiAiConnector.Engines.Perplexity;
+namespace MultiAiConnector.Engines.AI.Perplexity.Models;
 
 public enum ModelType
 {

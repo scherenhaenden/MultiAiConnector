@@ -1,4 +1,4 @@
-namespace MultiAiConnector.Engines.Core;
+namespace MultiAiConnector.Engines.AI.Perplexity.Models;
 
 public class Usage
 {

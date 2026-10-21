@@ -1,6 +1,4 @@
-using System.Text.Json;
-
-namespace MultiAiConnector.Engines.Core;
+namespace MultiAiConnector.Engines.AI.Core;
 
 public interface IAiRequesterByPrompts
 {

@@ -4,7 +4,7 @@ using MultiAiConnector.Engines.RestRequests;
 using MultiAiConnector.SystemExtender.Attributes;
 using Newtonsoft.Json;
 
-namespace MultiAiConnector.Engines.AI.Perplexity;
+namespace MultiAiConnector.Engines.AI.Perplexity.Service;
 
 public class PerplexityEngine: IAiRequesterByPrompts
 {
@@ -28,12 +28,6 @@ public class PerplexityEngine: IAiRequesterByPrompts
         var settings = new JsonSerializerSettings();
         settings.Converters.Add(new StringValueEnumConverter());
         var serialized = JsonConvert.SerializeObject(requestModel, settings);
-        
-        
-   
-
-
-        //var token = "Bearer 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";
 
         var response = await FluentRestRequester.Create()
             .BaseAddress("https://api.perplexity.ai/")
@@ -53,5 +47,19 @@ public class PerplexityEngine: IAiRequesterByPrompts
         }
 
         return "";
+    }
+    
+    private async Task<PerplexityResponseModel> SendRequest(string serialized)
+    {
+        return await FluentRestRequester.Create()
+            .BaseAddress("https://api.perplexity.ai/")
+            .Endpoint("chat/completions")
+            .WithMethod(HttpMethod.Post)
+            .WithHeader("accept", "application/json")
+            //.WithHeader("Content-Type", "application/json")
+            .WithContentType("application/json")
+            .WithHeader("authorization", _token)
+            .WithPayloadModel(serialized)
+            .SendAsync<PerplexityResponseModel>();
     }
 }
